@@ -1,0 +1,10 @@
+1. Create a Maven project: add reflections.org and jackson-databind
+2. Create an annotation @JavaBeanService. Annotation should be used on class types
+3. Create annotation @StartMethod. This annotation should be used above Java Bean start methods
+4. Create annotation @FileSource, receiving String as a parameter. Parameter is a filename. Annotation processor is supposed to create a file, if not exists and to set empty JSON object inside
+5. Create annotation @InputSource with target - method parameter. 
+- check that parameter type is a String.class
+- each type the @StartMethod is invoked - @InputSource processor should read the data from console
+- @InputSource should contain a display message (String displayMessage();)
+
+6. Create two services: UserService and CarService, implement create and read logic inside @StartMethod method
